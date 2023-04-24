@@ -15,6 +15,16 @@ import re
 BOT_TOKEN = BOT_TOKEN
 openai.api_key = API_TOKEN
 
+
+bot = Bot(token=BOT_TOKEN)
+storage = MemoryStorage()
+dp = Dispatcher(bot, storage=storage)
+
+
+class ChatState(StatesGroup):
+    waiting_for_text = State()
+
+
 class ChatState(StatesGroup):
     waiting_for_text = State()
 
