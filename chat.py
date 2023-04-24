@@ -6,6 +6,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ParseMode
 from aiogram.utils import executor
 from aiogram.utils.markdown import hbold
+from config import BOT_TOKEN, API_TOKEN
 
 import openai_secret_manager
 import openai
